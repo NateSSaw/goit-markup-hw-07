@@ -28,10 +28,12 @@
         <nav class="navigation">
           <ul class="navigation__list list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link navigation__link-active">Студія</a>
+              <a href="#" class="navigation__link">Студія</a>
             </li>
             <li class="navigation__item">
-              <a href="./portfolio.html" class="navigation__link">Портфоліо</a>
+              <a href="./portfolio.html" class="navigation__link navigation__link-active"
+                >Портфоліо</a
+              >
             </li>
             <li class="navigation__item"><a href="#" class="navigation__link">Контакти</a></li>
           </ul>
@@ -56,16 +58,27 @@
         </ul>
       </div>
     </header>
+
     <main>
       <section class="section portfolio">
         <div class="container">
           <h1 class="visually-hidden">Портфоліо</h1>
           <ul class="filters">
-            <li class="item"><button type="button" class="filters-button all">Усі</button></li>
-            <li class="item"><button type="button" class="filters-button">Веб-сайти</button></li>
-            <li class="item"><button type="button" class="filters-button">Додатки</button></li>
-            <li class="item"><button type="button" class="filters-button">Дизайн</button></li>
-            <li class="item"><button type="button" class="filters-button">Маркетинг</button></li>
+            <li class="filters__item">
+              <button type="button" class="filters__button filters__button-all">Усі</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button">Веб-сайти</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button">Додатки</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button">Дизайн</button>
+            </li>
+            <li class="filters__item">
+              <button type="button" class="filters__button">Маркетинг</button>
+            </li>
           </ul>
           <ul class="projects">
             <li class="cards">
@@ -292,43 +305,43 @@
           </address>
         </div>
         <div class="block-social">
-          <p class="social-title">приєднуйтесь</p>
-          <ul class="footer-social">
-            <li class="icons">
-              <a href="#" class="link-icon"
-                ><svg class="social" width="20" height="20">
+          <p class="block-social__title">приєднуйтесь</p>
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link"
+                ><svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-instagram2"></use></svg
               ></a>
             </li>
-            <li class="icons">
-              <a href="#" class="link-icon"
-                ><svg class="social" width="20" height="20">
+            <li class="social__item">
+              <a href="#" class="social__link"
+                ><svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-twitter2"></use></svg
               ></a>
             </li>
-            <li class="icons">
-              <a href="#" class="link-icon"
-                ><svg class="social" width="20" height="20">
+            <li class="social__item">
+              <a href="#" class="social__link"
+                ><svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-facebook2"></use></svg
               ></a>
             </li>
-            <li class="icons">
-              <a href="#" class="link-icon last"
-                ><svg class="social" width="20" height="20">
+            <li class="social__item">
+              <a href="#" class="social__link"
+                ><svg width="20" height="20">
                   <use href="./images/sprite.svg#icon-linkedin2"></use></svg
               ></a>
             </li>
           </ul>
         </div>
         <div class="form-subscription">
-          <p class="subscription-title">Підпишіться на розсилку</p>
+          <p class="form-subscription__title">Підпишіться на розсилку</p>
           <form class="form">
-            <label class="field">
-              <input type="email" name="email" placeholder="E-mail" class="field-email" />
+            <label class="form__label">
+              <input type="email" name="email" placeholder="E-mail" class="form__input" />
             </label>
-            <button type="submit">
+            <button type="submit" class="button">
               Підписатися
-              <svg width="24" height="24" class="icon-send">
+              <svg width="24" height="24" class="button__icon">
                 <use href="./images/sprite.svg#icon-send"></use>
               </svg>
             </button>

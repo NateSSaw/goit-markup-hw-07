@@ -615,7 +615,7 @@ footer .container {
 
 }
 
-.field__input {
+.form__input {
     display: block;
     width: 358px;
     height: 50px;
@@ -629,13 +629,13 @@ footer .container {
     transition: border-color var(--time-animation) var(--cubic);
 }
 
-.field__input:placeholder-shown{
+.form__input:placeholder-shown{
     font-size: 16px;
     line-height: 1.25;
     color: var(--footer-placeholder-color);
 }
 
-.form__label:focus-within > .field__input {
+.form__label:focus-within > .form__input {
     border-color: var(--accent-color);
 }
 
@@ -913,18 +913,18 @@ footer .container {
     padding-bottom: 94px;
 }
 
-.container .filters {
+.filters {
     display: flex;
     justify-content: center;
     margin-top: 0;
     margin-bottom: 50px;
 }
 
-.filters .item:not(:last-child) {
+.filters__item:not(:last-child) {
     margin-right: 8px;
 }
 
-.filters .filters-button {
+.filters__button {
     display: inline-block;
     padding: 6px 22px;
     min-width: 103px;
@@ -944,14 +944,14 @@ footer .container {
     transition: color var(--time-animation) var(--cubic), background-color var(--time-animation) var(--cubic), box-shadow var(--time-animation) var(--cubic);
 } 
 
-.filters .all {
+.filters__button-all {
     display: inline-block;
     padding: 6px 25px;
     min-width: 73px;
 }
 
-.filters .filters-button:hover,
-.filters .filters-button:focus {
+.filters__button:hover,
+.filters__button:focus {
     color: var(--focus-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px var(--box-shadow-one), 0px 1px 2px var(--box-shadow-two), 0px 2px 2px var(--box-shadow-three);
