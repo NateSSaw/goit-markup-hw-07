@@ -420,11 +420,11 @@
             </li>
           </ul>
         </div>
-        <div class="form-subscription">
-          <p class="form-subscription__title">Підпишіться на розсилку</p>
-          <form class="form">
-            <label class="form__label">
-              <input type="email" name="email" placeholder="E-mail" class="form__input" />
+        <div class="block-subscription">
+          <p class="block-subscription__title">Підпишіться на розсилку</p>
+          <form class="subscription">
+            <label class="subscription__label">
+              <input type="email" name="email" placeholder="E-mail" class="subscription__input" />
             </label>
             <button type="submit" class="button">
               Підписатися
@@ -438,50 +438,50 @@
     </footer>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <p class="form-title">Залиште свої дані, ми вам передзвонимо</p>
-        <form class="modal-form">
-          <div class="form-field">
-            <label for="name" class="form-label">Ім'я</label>
-            <input type="text" name="name" id="name" class="form-input" />
-            <svg width="18" height="18" class="input-icon">
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="form">
+          <div class="form__field">
+            <label for="name" class="form__label">Ім'я</label>
+            <input type="text" name="name" id="name" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
               <use href="./images/sprite.svg#icon-person"></use>
             </svg>
           </div>
-          <div class="form-field">
-            <label for="tel" class="form-label">Телефон</label>
-            <input type="tel" name="tel" id="tel" class="form-input" />
-            <svg width="18" height="18" class="input-icon">
+          <div class="form__field">
+            <label for="tel" class="form__label">Телефон</label>
+            <input type="tel" name="tel" id="tel" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
               <use href="./images/sprite.svg#icon-phone"></use>
             </svg>
           </div>
-          <div class="form-field">
-            <label for="mail" class="form-label">Пошта</label>
-            <input type="email" name="mail" id="mail" class="form-input" />
-            <svg width="18" height="18" class="input-icon">
+          <div class="form__field">
+            <label for="mail" class="form__label">Пошта</label>
+            <input type="email" name="mail" id="mail" class="form__input" />
+            <svg width="18" height="18" class="form__icon">
               <use href="./images/sprite.svg#icon-email"></use>
             </svg>
           </div>
-          <div class="form-field coments">
-            <label for="coment" class="form-label">Коментар</label>
+          <div class="form__field form__field-coments">
+            <label for="coment" class="form__label">Коментар</label>
             <textarea
               name="coment"
               id="coment"
               placeholder="Введіть текст"
-              class="field"
+              class="form_textarea"
             ></textarea>
           </div>
-          <label class="policy-label">
-            <input type="checkbox" name="policy" class="checkbox" />
-            <svg class="checkbox-icon" width="16" height="15">
+          <label class="form__policy">
+            <input type="checkbox" name="policy" class="form__checkbox" />
+            <svg class="check-icon" width="16" height="15">
               <use href="./images/sprite.svg#icon-checkmark"></use>
             </svg>
             Погоджуюся з розсилкою та приймаю
-            <a href="#" class="terms">Умови договору</a>
+            <a href="#" class="form__terms">Умови договору</a>
           </label>
-          <button type="submit" class="form-button">Відправити</button>
+          <button type="submit" class="form__button">Відправити</button>
         </form>
-        <button class="modal-button" data-modal-close>
-          <svg class="icon-modal" width="18" height="18">
+        <button class="backdrop__button" data-modal-close>
+          <svg class="backdrop__icon" width="18" height="18">
             <use href="./images/sprite.svg#icon-close"></use>
           </svg>
         </button>

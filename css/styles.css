@@ -584,7 +584,7 @@ footer .container {
     background-color: var(--accent-color);
 }
 
-.form-subscription {
+.block-subscription {
     justify-content: baseline;
     align-items: flex-end;
     margin-left: 93px;
@@ -593,7 +593,7 @@ footer .container {
     height: 86px;
 }
 
-.form-subscription__title {
+.block-subscription__title {
     margin-bottom: 20px;
     margin-top: 0;
 
@@ -603,19 +603,19 @@ footer .container {
     color: var(--focus-color);
 }
 
-.form-subscription .form {
+.subscription{
     display: flex;
 }
 
 
-.form__label {
+.subscription__label {
     display: flex;
     flex-direction: column;
     margin-right: 12px;
 
 }
 
-.form__input {
+.subscription__input {
     display: block;
     width: 358px;
     height: 50px;
@@ -629,13 +629,13 @@ footer .container {
     transition: border-color var(--time-animation) var(--cubic);
 }
 
-.form__input:placeholder-shown{
+.subscription__input:placeholder-shown{
     font-size: 16px;
     line-height: 1.25;
     color: var(--footer-placeholder-color);
 }
 
-.form__label:focus-within > .form__input {
+.subscription__label:focus-within > .subscription__input {
     border-color: var(--accent-color);
 }
 
@@ -696,7 +696,31 @@ footer .container {
     opacity: 0;
 }
 
-.backdrop .modal {
+.backdrop__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: var(--focus-color);
+
+
+    transition: fill var(--time-animation) var(--cubic);
+}
+
+.backdrop__button:hover,
+.backdrop__button:focus {
+    fill: var(--accent-color);
+}
+
+.modal {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -716,36 +740,9 @@ footer .container {
 
 }
 
-.modal .modal-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
 
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    background-color: var(--focus-color);
-    
 
-    transition: fill var(--time-animation) var(--cubic);
-}
-
-.modal .modal-button:hover,
-.modal .modal-button:focus {
-    fill: var(--accent-color);
-}
-
-.modal-form {
-    width: 100%;
-    height: 100%;
-}
-
-.modal .form-title {
+.modal__title {
     margin-top: 0;
     margin-bottom: 12px;
     margin-left: auto;
@@ -755,18 +752,27 @@ footer .container {
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    
+
     color: var(--title-text-color);
 }
 
-.modal-form .form-field {
+
+
+.form {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.form__field {
     position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
 }
 
- .form-field input {
+ .form__input {
     width: 100%;
     height: 40px;
     margin: 0;
@@ -781,10 +787,10 @@ footer .container {
     transition: border-color var(--time-animation) var(--cubic);
  }
 
- .form-field:focus-within  .form-input {
+ .form__field:focus-within  .form__input {
     border-color: var(--accent-color);
  }
- .form-field .form-label {
+ .form__label {
     margin-bottom: 4px;
 
     font-size: 12px;
@@ -794,7 +800,7 @@ footer .container {
     color: var(--icon-header-color);
  }
 
- .form-field .input-icon {
+ .form__icon {
     position: absolute;
     left: 12px;
     top: 29px;
@@ -802,15 +808,15 @@ footer .container {
     transition: fill var(--time-animation) var(--cubic);
  }
 
- .form-field:focus-within .input-icon{
+ .form__field:focus-within .form__icon {
     fill: var(--accent-color);
  }
 
- .form-field.coments {
+ .form__field-coments {
     margin-bottom: 20px;
  }
 
- .form-field .field {
+ .form_textarea {
     min-height: 120px;
     padding: 12px 16px;
 
@@ -823,18 +829,18 @@ footer .container {
     transition: border-color var(--time-animation) var(--cubic);
  }
 
- .coments:focus-within .field{
+ .form__field-coments:focus-within .form_textarea{
     border-color: var(--accent-color);
  }
 
- .field::placeholder {
+ .form_textarea::placeholder {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--placeholder-modal-color);
  }
 
-.modal-form .policy-label {
+.form__policy {
     position: relative;
     margin-bottom: 30px;
     text-align: center;
@@ -845,7 +851,7 @@ footer .container {
     color: var(--icon-header-color);
 }
 
-.policy-label .checkbox-icon {
+.check-icon {
     position: absolute;
     width: 16px;
     height: 15px;
@@ -860,14 +866,14 @@ footer .container {
     transition: background-color var(--time-animation) var(--cubic);
 }
 
-.policy-label .checkbox {
+.form__checkbox {
    position: absolute;
     -webkit-appearence: none;
     -moz-appearence: none;
     appearance: none;
 }
 
-.checkbox:checked ~ .checkbox-icon {
+.form__checkbox:checked ~ .check-icon {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     border-radius: 2px;
@@ -875,11 +881,11 @@ footer .container {
     background-origin: border-box;
 }
 
-.policy-label .terms {
+.form__terms {
     color: var(--accent-color);
 }
 
-.modal-form .form-button {
+.form__button {
     display: block;
     width: 200px;
     height: 50px;
@@ -900,8 +906,8 @@ footer .container {
     transition: background-color var(--time-animation) var(--cubic);
 }
 
-.modal-form .form-button:hover,
-.modal-form .form-button:focus {
+.form .form-button:hover,
+.form .form-button:focus {
     background-color: var(--button-hover-color);
 }
 
@@ -967,26 +973,26 @@ footer .container {
     gap: 30px;
 }
 
-.projects .cards {
+.projects__cards {
     width: calc((100% - 60px)/3);
     background: var(--focus-color);
     
 }
 
-.cards .link {
+.projects__link {
 
     display: block;
     text-decoration: none;
     transition: box-shadow var(--time-animation) var(--cubic);
 }
 
-.link .animation {
+.animation {
     position: relative;
     overflow: hidden;
     
 }
 
-.link .link-animation {
+.animation__text {
     position: absolute;
     top: 0;
     left: 0;
@@ -1005,25 +1011,26 @@ footer .container {
     transition: transform var(--time-animation) var(--cubic);
 
 }
-
-.cards .link:hover,
-.cards .link:focus {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-.cards .link:hover .link-animation,
-.cards .link:focus .link-animation {
-    transform: translateY(0);
-}
-
-.cards img {
+.projects__image {
     display: block;
     max-width: 100%;
 }
 
+.projects__link:hover,
+.projects__link:focus {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.projects__link:hover .lanimation__text,
+.projects__link:focus .animation__text {
+    transform: translateY(0);
+}
 
 
-.cards .bottom-cards {
+
+
+
+.projects__description {
     padding: 20px 24px;
     width: 370;
     border-left: 1px solid var(--border-color);
@@ -1032,7 +1039,7 @@ footer .container {
 
 }
 
-.cards .name {
+.projects__name {
     margin-top: 0;
     margin-bottom: 4px;
 
@@ -1045,11 +1052,11 @@ footer .container {
 }
 
 
-.cards .project-type {
+.projects__type {
     margin-top: 0;
     margin-bottom: 0;
 }
-.projects .project-type {
+.projects__type {
 
     color: var(--primary-text-color);
 
