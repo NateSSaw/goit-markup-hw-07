@@ -56,6 +56,10 @@ ul {
     padding-left: 0;
 }
 
+.list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
 .container {
     padding-left: 15px;
     padding-right: 15px;
@@ -64,7 +68,7 @@ ul {
     width: 1200px;
 }
 
- .page-header{
+ header{
     border-bottom: 1px solid var(--border-header-color);
 }
 
@@ -90,21 +94,18 @@ ul {
     color: var(--logo-header-color);
 }
 
-.list {
-    margin-top: 0;
-    margin-bottom: 0;
-}
 
-.site-nav {
+
+.navigation__list {
    display: flex;
    margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.navigation__item:not(:last-child) {
     margin-right: 50px;
 }
 
-.site-nav .link {
+.navigation__link {
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -120,12 +121,12 @@ ul {
     transition: color var(--time-animation) var(--cubic);
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
+.navigation__link:hover,
+.navigation__link:focus {
     color: var(--accent-color);
 }
 
-.site-nav .link.current::after {
+.navigation__link-active::after {
     content: '';
 
     position: absolute;
@@ -141,22 +142,21 @@ ul {
 }
 
 
-.site-nav .link.current {
+.navigation__link-active {
     color: var(--accent-color);
 }
 
-.header-contacts {
+.contacts {
     display: flex;
     margin-left: auto;
 }
 
-.header-contacts .item + .item {
+.contacts__item:nth-child(2) {
     margin-left: 50px;
 }
 
 
-.header-email,
-.header-tel {
+.contacts__link {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -174,10 +174,8 @@ ul {
 
 }
 
-.header-email:hover,
-.header-email:focus,
-.header-tel:hover,
-.header-tel:focus {
+.contacts__link:hover,
+.contacts__link:focus{
     color: var(--accent-color);
     fill: var(--accent-color);
 }
@@ -199,7 +197,7 @@ ul {
     background-color: var(--section-background-color);
 }
 
-.hero-title {
+.hero__title {
     max-width: 696px;
     margin-top: 0;
     margin-bottom: 40px;
@@ -216,7 +214,7 @@ ul {
     text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
     display: inline-block;
     padding: 10px 32px;
     min-width: 216px;
@@ -240,8 +238,8 @@ ul {
 
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
     background-color: var(--button-hover-color);
 }
 
@@ -263,7 +261,7 @@ ul {
     overflow: hidden;
 }
 
-.section.feature {
+.section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
@@ -330,7 +328,7 @@ ul {
 /* Чим ми займаємося */
 
 .section.direction {
-    padding-bottom: 94px;
+    padding-top: 0;
 }
 
 .container .directions {
@@ -377,8 +375,6 @@ ul {
 /* Наша команда */
 
 .section.people {
-    padding-top: 94px;
-    padding-bottom: 94px;
     margin-top: 0;
     margin-bottom: 0;
 
@@ -470,11 +466,6 @@ ul {
 }
 
 
-.section.clients-list {
-    padding-top: 94px;
-    padding-bottom: 94px;
-}
-
 
 .logo-clients .clients {
     display: flex;
@@ -524,15 +515,15 @@ footer .container {
     margin-bottom: 20px;
 }
 
-.logo-footer .first-part {
+.logo-footer__first-part {
     color: var(--accent-color);
 }
 
-.logo-footer .second-part {
+.logo-footer__second-part {
     color: var(--focus-color);
 }
 
-address .contacts {
+.footer-contacts{
     margin-top: 0;
     margin-bottom: 0px;
     font-style: normal;
@@ -540,33 +531,25 @@ address .contacts {
 
 }
 
-.contacts .item:not(:last-child) {
+.footer-contacts__item:not(:last-child) {
     margin-bottom: 9px;
 }
 
-.contacts .map {
-    display: inline-block;
+.footer-contacts__link.map {
 
     color: var(--focus-color);
-    text-decoration: none;
 }
-
-.contacts .mail {
+.footer-contacts__link {
     display: inline-block;
-}
-
-.contacts .mail,
-.contacts .telephone {
-    color: var(--mail-tel-footer-color);
     text-decoration: none;
-}
+    color: var(--mail-tel-footer-color);
 
-.item .contact {
     transition: color var(--time-animation) var(--cubic);
 }
 
-.item .contact:hover,
-.item .contact:focus {
+
+.footer-contacts__link:hover,
+.footer-contacts__link:focus {
     color: var(--accent-color);
 }
 
