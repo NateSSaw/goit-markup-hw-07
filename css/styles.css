@@ -68,7 +68,7 @@ ul {
     width: 1200px;
 }
 
- header{
+.header{
     border-bottom: 1px solid var(--border-header-color);
 }
 
@@ -277,28 +277,22 @@ ul {
     text-align: center;
 }
 
-.container .features {
+.features {
     display: flex;
     flex-wrap: wrap;
-    
-}
-
-.section .features {
     margin-bottom: 0;
     margin-top: 0;
     
-
 }
-
-.features .item {
+.features__item {
     width: 270px;
 }
 
-.features .item + .item {
+.features__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.features .icon-bg {
+.features__icon{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -309,7 +303,7 @@ ul {
 }
 
 
-.features .title {
+.features__title {
     margin-top: 0;
     margin-bottom: 10px;
     color: var(--title-text-color);
@@ -319,7 +313,7 @@ ul {
     text-transform: uppercase;
 }
 
-.features .description {
+.features__description {
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.71;
@@ -327,27 +321,27 @@ ul {
 
 /* Чим ми займаємося */
 
-.section.direction {
+.section.service {
     padding-top: 0;
 }
 
-.container .directions {
+.services {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
     
 }
 
-.directions .item {
+.services__item {
     display: block;
     position: relative;
 }
 
-.directions .item + .item {
+.services__item:not(:first-child) {
     margin-left: 30px;
 }
 
-.item .item-title {
+.services__title {
     position: absolute;
     width: 370px;
     height: 70px;
@@ -367,7 +361,7 @@ ul {
     background: rgba(47, 48, 58, 0.8);
 }
 
-.directions img {
+.services__image{
     display: block;
     max-width: 100%;
 }
@@ -382,29 +376,29 @@ ul {
 }
 
 
-.section .staff {
+.staff {
     display: flex;
     
     margin-top: 0;
     margin-bottom: 0;
 }
 
-.staff .card {
+.staff__card {
     box-shadow: 0px 1px 3px var(--box-shadow-three), 0px 1px 1px var(--box-shadow-four), 0px 2px 1px var(--box-shadow-five);
     border-radius: 0px 0px 4px 4px;
     background-color: var(--focus-color);
 }
 
-.staff .card + .card {
+.staff__card:not(:first-child) {
     margin-left: 30px;
 }
 
-.card img {
+.staff__photo {
     display: block;
     max-width: 100%;
 }
 
-.card .bottom-card {
+.bottom-card {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 30px;
@@ -412,7 +406,7 @@ ul {
     width: 270px;
 }
    
-.staff .name {
+.staff__name {
     margin-top: 0;
     margin-bottom: 10px;
 
@@ -424,7 +418,7 @@ ul {
     text-align: center
 }
 
-.staff .post {
+.staff__specialization {
     margin-top: 0;
     margin-left: 0;
     margin-right: 0;
@@ -443,11 +437,11 @@ ul {
     margin: 0;
 }
 
-.social-media .icons:not(:last-child) {
+.social-media__icons:not(:last-child) {
     margin-right: 10px;
 }
 
-.social-media .link-icon {
+.social-media__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -459,29 +453,25 @@ ul {
 }
 
 
-.social-media .link-icon:hover,
-.social-media .link-icon:focus {
+.social-media__link:hover,
+.social-media__link:focus {
     background-color: var(--accent-color);
     fill: var(--focus-color);
 }
 
 
 
-.logo-clients .clients {
+.clients {
     display: flex;
     margin-top: 0;
     margin-bottom: 0;
 }
-.clients li {
-    gap: 30px;
-    
-}
 
-.clients .company-logo:not(:last-child) {
+.clients__logo:not(:last-child) {
     margin-right: 30px;
 }
 
-.clients .logo-client {
+.clients__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -494,8 +484,8 @@ ul {
 }
 
 
-.clients .logo-client:focus,
-.clients .logo-client:hover {
+.clients__link:focus,
+.clients__link:hover {
     border-color: var(--accent-color);
     fill: var(--accent-color)
 }
@@ -557,7 +547,7 @@ footer .container {
     margin-left: 70px;
 }
 
-.block-social .social-title {
+.block-social__title {
     text-align: left;
     margin-top: 0;
     margin-bottom: 20px;
@@ -570,15 +560,15 @@ footer .container {
     color: var(--focus-color);
 }
 
-.footer-social {
+.social {
     display: flex;
     margin: 0;
     
 }
-.footer-social .icons:not(:last-child) {
+.social__item:not(:last-child) {
     margin-right: 10px;
 }
-.footer-social .link-icon {
+.social__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -589,8 +579,8 @@ footer .container {
     transition: background-color var(--time-animation) var(--cubic);
 }
 
-.footer-social .link-icon:hover,
-.footer-social .link-icon:focus {
+.social__link:hover,
+.social__link:focus {
     background-color: var(--accent-color);
 }
 
@@ -603,11 +593,7 @@ footer .container {
     height: 86px;
 }
 
-.form-subscription .form {
-    display: flex;
-}
-
-.form-subscription .subscription-title{
+.form-subscription__title {
     margin-bottom: 20px;
     margin-top: 0;
 
@@ -617,14 +603,19 @@ footer .container {
     color: var(--focus-color);
 }
 
-.form-subscription .field {
+.form-subscription .form {
+    display: flex;
+}
+
+
+.form__label {
     display: flex;
     flex-direction: column;
     margin-right: 12px;
 
 }
 
-.field .field-email {
+.field__input {
     display: block;
     width: 358px;
     height: 50px;
@@ -638,17 +629,17 @@ footer .container {
     transition: border-color var(--time-animation) var(--cubic);
 }
 
-.field-email:placeholder-shown{
+.field__input:placeholder-shown{
     font-size: 16px;
     line-height: 1.25;
     color: var(--footer-placeholder-color);
 }
 
-.form-subscription .field:focus-within > .field-email {
+.form__label:focus-within > .field__input {
     border-color: var(--accent-color);
 }
 
-.form-subscription button {
+.button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -671,12 +662,12 @@ footer .container {
     transition: background-color var(--time-animation) var(--cubic);
 }
 
-.form-subscription button:focus,
-.form-subscription button:hover {
+.button:focus,
+.button:hover {
     background-color: var(--button-hover-color);
 }
 
-.form-subscription .icon-send {
+.button__icon {
     margin-left: 10px;
 }
 .backdrop {
