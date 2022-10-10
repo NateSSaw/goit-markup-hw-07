@@ -1,14 +1,13 @@
 .clients {
-    display: flex;
-    margin-top: 0;
-    margin-bottom: 0;
-}
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
 
-.clients__logo:not(:last-child) {
+  &__logo:not(:last-child) {
     margin-right: 30px;
-}
+  }
 
-.clients__link {
+  &__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,12 +16,13 @@
     border: 1px solid var(--icon-social-first);
     border-radius: 4px;
     fill: var(--icon-social-first);
-    transition: border-color var(--time-animation) var(--cubic), fill var(--time-animation) var(--cubic);
-}
+    transition: border-color var(--time-animation) var(--cubic),
+      fill var(--time-animation) var(--cubic);
 
-
-.clients__link:focus,
-.clients__link:hover {
-    border-color: var(--accent-color);
-    fill: var(--accent-color)
+    &:focus,
+    &:hover {
+      border-color: var(--accent-color);
+      fill: var(--accent-color);
+    }
+  }
 }
