@@ -1,11 +1,3 @@
-@charset "UTF-8";
-/* лого чорний #000000 */
-/* основний синій #2196F3 */
-/* основний чорний #212121 */
-/* сірий номер телефону #757575 */
-/* основний блок Hero білий #FFFFFF */
-/* футер посилання та телефон чорний з прозорістю rgba(255, 255, 255, 0.6) */
-/* блок Hero і футер колір фону #2F303A */
 :root {
   --primary-text-color: #757575;
   --title-text-color: #212121;
@@ -35,6 +27,20 @@
   --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 body {
   background-color: var(--focus-color);
   color: var(--primary-text-color);
@@ -43,7 +49,6 @@ body {
   letter-spacing: 0.03em;
 }
 
-/* Шапка */
 ul {
   list-style: none;
   padding-left: 0;
@@ -60,6 +65,20 @@ ul {
   margin-left: auto;
   margin-right: auto;
   width: 1200px;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
 }
 
 .header {
@@ -162,7 +181,6 @@ ul {
   fill: var(--accent-color);
 }
 
-/* main */
 .hero {
   max-width: 1600px;
   min-height: 605px;
@@ -216,36 +234,6 @@ ul {
   background-color: var(--button-hover-color);
 }
 
-/* Особливості */
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  -webkit-clip-path: inset(100%);
-          clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section .section-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  text-align: center;
-}
-
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -286,7 +274,6 @@ ul {
   line-height: 1.71;
 }
 
-/* Чим ми займаємося */
 .section.service {
   padding-top: 0;
 }
@@ -328,7 +315,6 @@ ul {
   max-width: 100%;
 }
 
-/* Наша команда */
 .section.people {
   margin-top: 0;
   margin-bottom: 0;
@@ -452,15 +438,13 @@ footer .container {
   align-items: baseline;
 }
 
-.container .logo-footer {
+.logo-footer {
   display: inline-block;
   margin-bottom: 20px;
 }
-
 .logo-footer__first-part {
   color: var(--accent-color);
 }
-
 .logo-footer__second-part {
   color: var(--focus-color);
 }
@@ -471,31 +455,26 @@ footer .container {
   font-style: normal;
   line-height: 1.71;
 }
-
 .footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
-
-.footer-contacts__link.map {
-  color: var(--focus-color);
-}
-
 .footer-contacts__link {
   display: inline-block;
   text-decoration: none;
   color: var(--mail-tel-footer-color);
   transition: color var(--time-animation) var(--cubic);
 }
-
-.footer-contacts__link:hover,
-.footer-contacts__link:focus {
+.footer-contacts__link__link:hover, .footer-contacts__link__link:focus {
   color: var(--accent-color);
+}
+
+.footer-contacts__link.map {
+  color: var(--focus-color);
 }
 
 .block-social {
   margin-left: 70px;
 }
-
 .block-social__title {
   text-align: left;
   margin-top: 0;
@@ -508,16 +487,14 @@ footer .container {
   color: var(--focus-color);
 }
 
-.social {
+.social-pages {
   display: flex;
   margin: 0;
 }
-
-.social__item:not(:last-child) {
+.social-pages__item:not(:last-child) {
   margin-right: 10px;
 }
-
-.social__link {
+.social-pages__link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -527,9 +504,7 @@ footer .container {
   background: rgba(255, 255, 255, 0.1);
   transition: background-color var(--time-animation) var(--cubic);
 }
-
-.social__link:hover,
-.social__link:focus {
+.social-pages__link:hover, .social-pages__link:focus {
   background-color: var(--accent-color);
 }
 
@@ -540,7 +515,6 @@ footer .container {
   width: 570px;
   height: 86px;
 }
-
 .block-subscription__title {
   margin-bottom: 20px;
   margin-top: 0;
@@ -553,13 +527,11 @@ footer .container {
 .subscription {
   display: flex;
 }
-
 .subscription__label {
   display: flex;
   flex-direction: column;
   margin-right: 12px;
 }
-
 .subscription__input {
   display: block;
   width: 358px;
@@ -572,25 +544,21 @@ footer .container {
   color: var(--focus-color);
   transition: border-color var(--time-animation) var(--cubic);
 }
-
 .subscription__input:-moz-placeholder-shown {
   font-size: 16px;
   line-height: 1.25;
   color: var(--footer-placeholder-color);
 }
-
 .subscription__input:-ms-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
   color: var(--footer-placeholder-color);
 }
-
 .subscription__input:placeholder-shown {
   font-size: 16px;
   line-height: 1.25;
   color: var(--footer-placeholder-color);
 }
-
 .subscription__label:focus-within > .subscription__input {
   border-color: var(--accent-color);
 }
@@ -613,12 +581,9 @@ footer .container {
   border: none;
   transition: background-color var(--time-animation) var(--cubic);
 }
-
-.button:focus,
-.button:hover {
+.button:focus, .button:hover {
   background-color: var(--button-hover-color);
 }
-
 .button__icon {
   margin-left: 10px;
 }
@@ -697,14 +662,15 @@ footer .container {
   width: 100%;
   height: 100%;
 }
-
 .form__field {
   position: relative;
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
-
+.form__field--coments {
+  margin-bottom: 20px;
+}
 .form__input {
   width: 100%;
   height: 40px;
@@ -718,11 +684,6 @@ footer .container {
   outline: none;
   transition: border-color var(--time-animation) var(--cubic);
 }
-
-.form__field:focus-within .form__input {
-  border-color: var(--accent-color);
-}
-
 .form__label {
   margin-bottom: 4px;
   font-size: 12px;
@@ -730,23 +691,13 @@ footer .container {
   letter-spacing: 0.01em;
   color: var(--icon-header-color);
 }
-
 .form__icon {
   position: absolute;
   left: 12px;
   top: 29px;
   transition: fill var(--time-animation) var(--cubic);
 }
-
-.form__field:focus-within .form__icon {
-  fill: var(--accent-color);
-}
-
-.form__field.coments {
-  margin-bottom: 20px;
-}
-
-.form_textarea {
+.form__textarea {
   min-height: 120px;
   padding: 12px 16px;
   border: 1px solid var(--border-form-modal);
@@ -755,32 +706,24 @@ footer .container {
   outline: none;
   transition: border-color var(--time-animation) var(--cubic);
 }
-
-.form__field-coments:focus-within .form_textarea {
-  border-color: var(--accent-color);
-}
-
-.form_textarea::-moz-placeholder {
+.form__textarea::-moz-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--placeholder-modal-color);
 }
-
-.form_textarea:-ms-input-placeholder {
+.form__textarea:-ms-input-placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--placeholder-modal-color);
 }
-
-.form_textarea::placeholder {
+.form__textarea::placeholder {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--placeholder-modal-color);
 }
-
 .form__policy {
   position: relative;
   margin-bottom: 30px;
@@ -790,20 +733,6 @@ footer .container {
   line-height: 1.71;
   color: var(--icon-header-color);
 }
-
-.check-icon {
-  position: absolute;
-  width: 16px;
-  height: 15px;
-  left: 10px;
-  top: 4px;
-  background-color: var(--focus-color);
-  fill: var(--focus-color);
-  border: 2px solid var(--title-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: background-color var(--time-animation) var(--cubic);
-}
-
 .form__checkbox {
   position: absolute;
   -webkit-appearence: none;
@@ -812,19 +741,9 @@ footer .container {
      -moz-appearance: none;
           appearance: none;
 }
-
-.form__checkbox:checked ~ .check-icon {
-  background-color: var(--accent-color);
-  border-color: var(--accent-color);
-  border-radius: 2px;
-  box-shadow: none;
-  background-origin: border-box;
-}
-
 .form__terms {
   color: var(--accent-color);
 }
-
 .form__button {
   display: block;
   width: 200px;
@@ -843,13 +762,40 @@ footer .container {
   border: none;
   transition: background-color var(--time-animation) var(--cubic);
 }
-
-.form .form-button:hover,
-.form .form-button:focus {
+.form__button:hover, .form__button:focus {
   background-color: var(--button-hover-color);
 }
 
-/* Стилі Портфоліо */
+.form__field:focus-within .form__input,
+.form__field:focus-within .form__textarea {
+  border-color: var(--accent-color);
+}
+
+.form__field:focus-within .form__icon {
+  fill: var(--accent-color);
+}
+
+.check-icon {
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  left: 10px;
+  top: 4px;
+  background-color: var(--focus-color);
+  fill: var(--focus-color);
+  border: 2px solid var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: background-color var(--time-animation) var(--cubic);
+}
+
+.form__checkbox:checked ~ .check-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  border-radius: 2px;
+  box-shadow: none;
+  background-origin: border-box;
+}
+
 .section.portfolio {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -861,11 +807,9 @@ footer .container {
   margin-top: 0;
   margin-bottom: 50px;
 }
-
 .filters__item:not(:last-child) {
   margin-right: 8px;
 }
-
 .filters__button {
   display: inline-block;
   padding: 6px 22px;
@@ -881,21 +825,17 @@ footer .container {
   border-radius: 4px;
   transition: color var(--time-animation) var(--cubic), background-color var(--time-animation) var(--cubic), box-shadow var(--time-animation) var(--cubic);
 }
-
-.filters__button-all {
+.filters__button:hover, .filters__button:focus {
+  color: var(--focus-color);
+  background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px var(--box-shadow-one), 0px 1px 2px var(--box-shadow-two), 0px 2px 2px var(--box-shadow-three);
+}
+.filters__button--active {
   display: inline-block;
   padding: 6px 25px;
   min-width: 73px;
 }
 
-.filters__button:hover,
-.filters__button:focus {
-  color: var(--focus-color);
-  background-color: var(--accent-color);
-  box-shadow: 0px 3px 1px var(--box-shadow-one), 0px 1px 2px var(--box-shadow-two), 0px 2px 2px var(--box-shadow-three);
-}
-
-/* Стилі карток */
 .projects {
   display: flex;
   flex-wrap: wrap;
@@ -904,23 +844,50 @@ footer .container {
   margin-bottom: 0;
   gap: 30px;
 }
-
 .projects__cards {
   width: calc((100% - 60px) / 3);
   background: var(--focus-color);
 }
-
 .projects__link {
   display: block;
   text-decoration: none;
   transition: box-shadow var(--time-animation) var(--cubic);
+}
+.projects__link:hover, .projects__link:focus {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.projects__image {
+  display: block;
+  max-width: 100%;
+}
+.projects__description {
+  padding: 20px 24px;
+  width: 370;
+  border-left: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.projects__name {
+  margin-top: 0;
+  margin-bottom: 4px;
+  color: var(--title-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.projects__type {
+  margin-top: 0;
+  margin-bottom: 0;
+  color: var(--primary-text-color);
+  font-size: 16px;
+  line-height: 1.88;
 }
 
 .animation {
   position: relative;
   overflow: hidden;
 }
-
 .animation__text {
   position: absolute;
   top: 0;
@@ -937,46 +904,7 @@ footer .container {
   transition: transform var(--time-animation) var(--cubic);
 }
 
-.projects__image {
-  display: block;
-  max-width: 100%;
-}
-
-.projects__link:hover,
-.projects__link:focus {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
 .projects__link:hover .animation__text,
 .projects__link:focus .animation__text {
   transform: translateY(0);
-}
-
-.projects__description {
-  padding: 20px 24px;
-  width: 370;
-  border-left: 1px solid var(--border-color);
-  border-right: 1px solid var(--border-color);
-  border-bottom: 1px solid var(--border-color);
-}
-
-.projects__name {
-  margin-top: 0;
-  margin-bottom: 4px;
-  color: var(--title-text-color);
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-}
-
-.projects__type {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.projects__type {
-  color: var(--primary-text-color);
-  font-size: 16px;
-  line-height: 1.88;
 }/*# sourceMappingURL=main.css.map */
