@@ -32,6 +32,10 @@ footer .container {
     margin-bottom: 9px;
   }
 
+  &__link.map {
+    color: var(--focus-color);
+  }
+
   &__link {
     display: inline-block;
     text-decoration: none;
@@ -39,15 +43,11 @@ footer .container {
 
     transition: color var(--time-animation) var(--cubic);
 
-    &__link:hover,
-    &__link:focus {
+    &:hover,
+    &:focus {
       color: var(--accent-color);
     }
   }
-}
-
-.footer-contacts__link.map {
-  color: var(--focus-color);
 }
 
 .block-social {

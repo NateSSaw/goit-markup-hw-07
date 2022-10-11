@@ -264,16 +264,13 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .services__item {
   display: block;
   position: relative;
 }
-
 .services__item:not(:first-child) {
   margin-left: 30px;
 }
-
 .services__title {
   position: absolute;
   width: 370px;
@@ -290,7 +287,6 @@ ul {
   color: var(--focus-color);
   background: rgba(47, 48, 58, 0.8);
 }
-
 .services__image {
   display: block;
   max-width: 100%;
@@ -307,30 +303,18 @@ ul {
   margin-top: 0;
   margin-bottom: 0;
 }
-
 .staff__card {
   box-shadow: 0px 1px 3px var(--box-shadow-three), 0px 1px 1px var(--box-shadow-four), 0px 2px 1px var(--box-shadow-five);
   border-radius: 0px 0px 4px 4px;
   background-color: var(--focus-color);
 }
-
 .staff__card:not(:first-child) {
   margin-left: 30px;
 }
-
 .staff__photo {
   display: block;
   max-width: 100%;
 }
-
-.bottom-card {
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  width: 270px;
-}
-
 .staff__name {
   margin-top: 0;
   margin-bottom: 10px;
@@ -340,7 +324,6 @@ ul {
   line-height: 1.18;
   text-align: center;
 }
-
 .staff__specialization {
   margin-top: 0;
   margin-left: 0;
@@ -352,17 +335,23 @@ ul {
   text-align: center;
 }
 
+.bottom-card {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 270px;
+}
+
 .social-media {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
 }
-
 .social-media__icons:not(:last-child) {
   margin-right: 10px;
 }
-
 .social-media__link {
   display: flex;
   justify-content: center;
@@ -373,9 +362,7 @@ ul {
   fill: var(--icon-social-first);
   transition: background-color var(--time-animation) var(--cubic), fill var(--time-animation) var(--cubic);
 }
-
-.social-media__link:hover,
-.social-media__link:focus {
+.social-media__link:hover, .social-media__link:focus {
   background-color: var(--accent-color);
   fill: var(--focus-color);
 }
@@ -435,18 +422,17 @@ footer .container {
 .footer-contacts__item:not(:last-child) {
   margin-bottom: 9px;
 }
+.footer-contacts__link.map {
+  color: var(--focus-color);
+}
 .footer-contacts__link {
   display: inline-block;
   text-decoration: none;
   color: var(--mail-tel-footer-color);
   transition: color var(--time-animation) var(--cubic);
 }
-.footer-contacts__link__link:hover, .footer-contacts__link__link:focus {
+.footer-contacts__link:hover, .footer-contacts__link:focus {
   color: var(--accent-color);
-}
-
-.footer-contacts__link.map {
-  color: var(--focus-color);
 }
 
 .block-social {
